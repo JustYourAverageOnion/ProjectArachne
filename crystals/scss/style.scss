@@ -1,0 +1,368 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #2A2054;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+$bgColor: #2a2054;
+// $bgColor: white;
+$width: 250px;
+$border: solid black 0px;
+.container {
+	position: relative;
+	margin: 2em auto;
+	width: $width*3;
+	height: $width*2;
+	border: $border;
+	> div {
+		border: $border;
+		position: absolute;
+		width: $width;
+		height: $width;
+	}
+	> .crystal-1 {
+		margin-left: $width*0;
+	}
+	> .crystal-5 {
+		margin-left: $width*1;
+	}
+	> .crystal-3 {
+		margin-left: $width*2;
+	}
+	> .crystal-4 {
+		margin-left: $width*0;
+		margin-top: $width;
+	}
+	> .crystal-2 {
+		margin-left: $width*1;
+		margin-top: $width;
+	}
+	> .crystal-6 {
+		margin-left: $width*2;
+		margin-top: $width;
+	}
+
+	> .crystal-1 {
+		$c1W: 60px;
+		$c1H: 120px;
+		$c1B: 20px;
+		> .hexagon {
+			position: absolute;
+			width: $c1W;
+			height: $c1H;
+			background-color: #e4ed7a;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			> .line {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				&:after,
+				&:before {
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%) rotate(-25deg);
+					position: absolute;
+					content: "";
+					width: $c1W+20px;
+					width: $c1W+20px;
+					height: 20px;
+					background-color: white;
+				}
+				&:after {
+					transform: translate(-50%, -50%) translatey(22px) rotate(-25deg);
+					height: 7px;
+				}
+			}
+			> .center {
+				position: absolute;
+				width: $c1W;
+				height: $c1H/3;
+				background-color: transparent;
+				border: solid $c1B transparent;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				border-right-color: #8bc63d;
+				border-left-color: #63c765;
+			}
+			> .top {
+				position: absolute;
+				&:after {
+					position: absolute;
+					content: "";
+					width: 0;
+					height: $c1H/5;
+					background-color: transparent;
+					border: solid $c1B transparent;
+					transform: translate(-0px, -20px) rotate(45deg);
+					border-left-color: #8bc63d;
+				}
+			}
+		}
+	}
+	> .crystal-2 {
+		$c2S: 150px;
+		> .diamond {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(-45deg);
+			width: $c2S;
+			height: $c2S;
+			border-radius: 0.5em;
+			background: linear-gradient(45deg, #8c37d5, #8c37d5 50%, #a048fe 50%);
+			$quater: 25%;
+			background-image: conic-gradient(
+				#a048fe 0%,
+				#a048fe $quater/2,
+				#d883eb $quater/2,
+				#d883eb $quater*1.5,
+				#8c38d6 $quater*1.5,
+				#8c38d6 $quater*2.5,
+				#8435cc $quater*2.5,
+				#8435cc $quater*3.5,
+				#a048fe $quater*3.5
+			);
+			overflow: hidden;
+			> .top {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform-origin: bottom center;
+				transform: translate(-50%, -100%) rotate(45deg);
+				background-color: transparent;
+				border: solid $c2S/2 transparent;
+				border-top: solid 0 transparent;
+				border-left: solid $c2S/3.6 transparent;
+				border-right: solid $c2S/3.6 transparent;
+				border-bottom: solid $c2S/1.46 #bd77fd;
+				> .line2 {
+					position: absolute;
+					bottom: -50px;
+					left: 0;
+					$color: #fdb8eb;
+					&:after{
+						position: absolute;
+						content: '';
+						width: 100px;
+						height: 20px;
+						background-color: $color;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%) rotate(-20deg);
+					}
+					&:before{
+						position: absolute;
+						content: '';
+						width: 100px;
+						height: 7px;
+						background-color: $color;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%) translatey(30px) rotate(-20deg);
+					}
+				}
+				> .correction {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					&:after,
+					&:before {
+						position: absolute;
+						content: "";
+						width: 30px;
+						height: 180px;
+						background-color: black;
+						top: 50%;
+						left: 50%;
+					}
+					&:after {
+						transform-origin: top center;
+						transform: translate(-50%, -50%) translate(12px,20px) rotate(22deg);
+						background-color: #A048FF;
+					}
+					&:before {
+						transform-origin: top center;
+						transform: translate(-50%, -50%) translate(-12px,20px) rotate(-22deg);
+						background-color: #D883EB;
+						// background-color: black;
+					}
+				}
+			}
+			> .bottom {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform-origin: top center;
+				transform: translate(-50%, 0%) rotate(45deg);
+				background-color: transparent;
+				border-bottom: solid 0 transparent;
+				border-left: solid $c2S/3.6 transparent;
+				border-right: solid $c2S/3.6 transparent;
+				border-top: solid $c2S/1.46 #a161fe;
+			}
+		}
+	}
+	> .crystal-5 {
+		position: absolute;
+		$c5W: 100px;
+		$c5H: 100px;
+		$c5B: 30px;
+		$main: #fbe41d;
+		$left: #f4a63a;
+		$right: #fdc451;
+		$bottom: #e37329;
+
+		> .triangle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 10+$c5W;
+			height: $c5H;
+			background-color: $main;
+			overflow: hidden;
+			> .line {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				animation: lineT 2s infinite;
+				&:after,
+				&:before {
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%) translate(0px, 20px) rotate(-25deg);
+					position: absolute;
+					content: "";
+					width: $c5W+30px;
+					height: 20px;
+					background-color: white;
+				}
+				&:after {
+					transform: translate(-50%, -50%) translatey(20px+25px) rotate(-25deg);
+					height: 7px;
+				}
+			}
+		}
+		> .left,
+		> .right,
+		> .bottom {
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			border: solid transparent $c5B;
+			height: $c5H*1.5;
+			width: $c5W*1.5;
+		}
+		> .left {
+			border-left: $c5B solid $left;
+			transform-origin: bottom left;
+			transform: translate(-50%, -50%) translatey(-25px) rotate(30deg);
+			box-shadow: -20px -0px 0 $bgColor, -22px -0px 0 $bgColor;
+		}
+		> .right {
+			border-right: $c5B solid $right;
+			transform-origin: bottom right;
+			transform: translate(-50%, -50%) translatey(-25px) rotate(-30deg);
+			box-shadow: 20px -0px 0 $bgColor, 22px -0px 0 $bgColor;
+		}
+		> .bottom {
+			border-bottom: $c5B solid $bottom;
+			transform: translate(-50%, -50%) translatey(-25px);
+		}
+		> .tCurve {
+			position: absolute;
+			width: 15px;
+			height: 54px;
+			border-radius: 5em;
+			background: linear-gradient(to right, $left, $left 50%, $right 50%);
+			left: 50%;
+			transform-origin: bottom center;
+			transform: translate(-50%, 20px) translatey(10px);
+			box-shadow: 0 -10px 0 $bgColor;
+			&:before {
+				position: absolute;
+				content: "";
+				background-color: $left;
+				$size: 20px;
+				width: $size/1.5;
+				height: $size;
+				top: 50%;
+				left: 50%;
+				transform: translate(-100%, -20%);
+			}
+		}
+		> .brCurve {
+			position: absolute;
+			width: 15px;
+			height: 54px;
+			border-radius: 5em;
+			background: linear-gradient(to right, $right, $right 50%, $bottom 50%);
+			transform-origin: bottom center;
+			transform: translate(-2px, -2px) rotate(120deg);
+			bottom: 74px;
+			right: 64px;
+			box-shadow: 0 -10px 0 $bgColor;
+			&:before {
+				position: absolute;
+				content: "";
+				background-color: $bottom;
+				$size: 20px;
+				width: $size/1.5;
+				height: $size;
+				top: 50%;
+				left: 50%;
+				transform: translate(0%, -30%);
+			}
+		}
+		> .blCurve {
+			position: absolute;
+			width: 15px;
+			height: 54px;
+			border-radius: 5em;
+			background: linear-gradient(to right, $bottom, $bottom 50%, $left 50%);
+			transform-origin: bottom center;
+			transform: translate(2px, -2px) rotate(-120deg);
+			bottom: 74px;
+			left: 65px;
+			box-shadow: 0 -10px 0 $bgColor;
+			&:before {
+				position: absolute;
+				content: "";
+				background-color: $bottom;
+				$size: 20px;
+				width: $size/1.5;
+				height: $size;
+				top: 50%;
+				left: 50%;
+				transform: translate(-100%, -40%);
+			}
+		}
+	}
+}
+@keyframes lineT {
+	0%,
+	100% {
+		opacity: 1;
+		transform: translatey(0);
+	}
+	60% {
+		opacity: 1;
+		transform: translatey(-100px);
+	}
+	61% {
+		opacity: 0;
+		transform: translatey(80px);
+	}
+	62% {
+		opacity: 1;
+		transform: translatey(80px);
+	}
+}

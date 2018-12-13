@@ -1,0 +1,1 @@
+// https://image.freepik.com/free-vector/pack-of-six-colored-gemstones_23-2147616256.jpg
