@@ -1,0 +1,994 @@
+* { 
+	margin: 0;
+	padding: 0;
+	background-color: 0; 
+}
+::-webkit-scrollbar {
+	display: none;
+}
+$outline: solid black 0px;
+$main: 900px;
+body{
+	background:
+		linear-gradient(to bottom,
+		#A2E0EF,#A2E0EF 300px,
+		#EDD130 300px,#EDD130 600px,
+		#206CC0 600px)
+}
+.container {
+	position: relative;
+	margin: 0em auto;
+	width: $main;
+	height: $main;
+	border: $outline;
+	
+}
+.top,
+.middle,
+.bottom{
+	position: absolute;
+	width: $main;
+	height: $main/3;
+	overflow: hidden;
+}
+
+.top{
+	z-index: 1;
+	background-color: #A2E0EF;
+}
+.middle{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: 
+		linear-gradient(to right, #EDD130,#EDD130 50%, #126249 50%);
+	> .left, > .right{
+		position: absolute;
+		height: 100%;
+		width: 50%;
+		top: 50%;
+		transform: translate(0%, -50%);
+	}
+	> .left{
+		left: 0;
+		border: $outline;
+		> .dino-1{
+			position: absolute;
+			width: 250px;
+			height: 200px;
+			// border: $outline;
+			top: 20px;
+			left: 40px;
+		}
+		> .dino-2{
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			border: $outline;
+			bottom: 20px;
+			left: 20px;
+			$skinY: #ea9600;
+			$skinLO: #ee7001;
+			$skinMO: #ce4a00;
+			$skinDO: #a62b01;
+			> .head{
+				position: absolute;
+				width: 120px;
+				height: 80px;
+				border-radius: 2em 2em 2em 0;
+				background: 
+					linear-gradient(to bottom,
+					$skinY,$skinY 35%,$skinMO 35%,$skinMO 40%,
+						transparent 40%,transparent 60%,
+					$skinMO 60%,$skinMO 65%,$skinY 65%);
+				right: 0;
+				top: -16px;
+				overflow: hidden;
+				&:before{
+					position: absolute;
+					content: '';
+					width: 70px;
+					height: 70px;
+					border-radius: 2em;
+					background-color: $skinLO;
+					top: -10px;
+				}
+				&:after{
+					position: absolute;
+					content: '';
+					width: 75px;
+					height: 45px;
+					border-radius: 0 2em 0 0;
+					background-color: $skinMO;
+					bottom: 0;
+				}
+				> .teeth{
+					position: absolute;
+					color: #B4B5B6;
+					background-color: currentcolor;
+					width: 8px;
+					height: 8px;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%)
+						translate(10px,-4px);
+					border-radius: 0 0 5em 0;
+					box-shadow: 
+						16px*1 0 0 currentcolor,
+						16px*2 0 0 currentcolor,
+						16px*3 0 0 currentcolor,
+						16px*4 0 0 currentcolor,
+						;
+					&:after{
+						content: '';
+						position: absolute;
+						color: #B4B5B6;
+						background-color: currentcolor;
+						width: 8px;
+						height: 8px;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%)
+							translate(-9px,8px);
+						border-radius: 0 5em 0 0;
+						box-shadow: 
+							16px*1 0 0 currentcolor,
+							16px*2 0 0 currentcolor,
+							16px*3 0 0 currentcolor,
+							16px*4 0 0 currentcolor,
+							;
+					}
+				}
+				> .eyes{
+					position: absolute;
+					$size: 20px;
+					width:$size;
+					height:$size;
+					border-radius:50%;
+					background: radial-gradient(black, black 15%, #EDD130 15%,#EDD130 40%,black 40%);
+					right: 50px;
+					top: 10px;
+					&:after{
+						position: absolute;
+						content: '';
+						left: 50%;
+						transform: translatex(-50%) translatey(-2px);
+						width:$size;
+						height:$size/2;
+						border-radius:5em 5em  0 0;
+						background-color: $skinDO;
+					}
+				}
+			}
+			> .tail{
+				position: absolute;
+				$diff: 30px;
+				border-radius: 0 0 1.5em 3em; 
+				width: -$diff+200px;
+				height: -$diff+100px;
+				border: solid $skinMO $diff;
+				border-top-width: 0;
+				border-right-width: 0;
+				bottom: 0;
+			}
+			> .body{
+				position: absolute;
+				background-color: $skinY;
+				width: 135px;
+				height: 90px;
+				border-radius: 2em 0 2em 2em;
+				top: 50%;
+				transform: translate(-00%, -40%);
+				&:before{
+					position: absolute;
+					width: 80px;
+					height: 40px;
+					content: '';
+					background-color: $skinLO;
+					bottom: 0;
+					border-radius: 0 2em
+				}
+				> .hand{
+					position: absolute;
+					right: 10px;
+					top: 20px;
+					$size: 20px;
+					width:$size;
+					height:$size;
+					border-radius:50%;
+					background-color: $skinMO;
+					&:before{
+						position: absolute;
+						content: '';
+						width: 30px;
+						height: 50px;
+						border-radius: 0 0 0 2em;
+						border: solid 15px $skinLO;
+						border-top-width: 0;
+						border-right-width: 0;
+						transform-origin: top left;
+						transform: translate(10px,21px) rotate(-45deg);
+					}
+					&:after{
+						position: absolute;
+						content: '';
+						width: 30px;
+						height: 15px;
+						border-radius: 5em 5em 0 0;
+						background: linear-gradient(to right,$skinMO, $skinMO 50%, black 50%);
+						transform: translate(75px,25px) rotate(45deg);
+					}
+				}
+			}
+		}
+		> .dino-3{
+			position: absolute;
+			width: 200px;
+			height: 150px;
+			// border: $outline;
+			bottom: 20px;
+			right: 20px;
+		}
+	}
+	> .right { 
+		right: 0;
+		border: $outline;
+	}
+}
+.bottom{
+	$water: #206CC0;
+	$bubble: #6897cd;
+	z-index: 1;
+	bottom: 0;
+	background-color: $water;
+	> .bubblesB{
+		position: absolute;
+		$size: 15px;
+		width:$size;
+		height:$size;
+		border-radius:50%;
+		color: $bubble;
+		background-color: currentcolor;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%)
+			translatey(-50px) translatex(-330px);
+		box-shadow: 
+			150px 0 0 currentcolor,
+			500px -20px 0 currentcolor,
+			100px 150px 0 currentcolor,
+	}
+	> .wave{
+		position: absolute;
+		width: 80px;
+		height: 20px;
+		border: $outline;
+		overflow: hidden;
+		> .down{
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -80%) ;
+			position: absolute;
+			width:50px;
+			height:30px;
+			border-radius:50%;
+			background-color: transparent;
+			border-radius: 50%;
+			border: solid 8px transparent;
+			border-bottom-color: $bubble;
+		}
+		> .left{
+			top: 50%;
+			left: 0%;
+			transform: translate(-30px, -8px) ;
+			position: absolute;
+			width:50px;
+			height:30px;
+			border-radius:50%;
+			background-color: transparent;
+			border-radius: 50%;
+			border: solid 8px transparent;
+			border-top-color: $bubble;
+		}
+		> .right{
+			top: 50%;
+			left: 0%;
+			transform: translate(46px, -8px) ;
+			position: absolute;
+			width:50px;
+			height:30px;
+			border-radius:50%;
+			background-color: transparent;
+			border-radius: 50%;
+			border: solid 8px transparent;
+			border-top-color: $bubble;
+		}
+	}
+	> .wave.wave-1{left:20px;top: 150px;}
+	> .wave.wave-2{left:120px;top: 150px;}
+	> .wave.wave-3{left:70px;top: 105px;}
+	> .wave.wave-4{left:150px;top: 105px;}
+	> .wave.wave-5{left:150px;top: 65px;}
+	> .wave.wave-7{left:500px;top: 60px;}
+	> .wave.wave-8{left:500px;top: 20px;}
+	> .wave.wave-6{left:-40px+310px;top: 60px;}
+	> .wave.wave-9{left:-40px+310px;top: 20px;}
+	> .wave.wave-10{left:-40px+380px;top: 20px;}
+	> .wave.wave-11{left:-40px+310px;top: 210px;}
+	> .wave.wave-12{left:-40px+310px;top: 250px;}
+	> .wave.wave-13{left:70px+310px;top: 270px;}
+	> .wave.wave-14{left:70px+310px+80px*1;top: 270px;}
+	> .wave.wave-15{left:810px;top: 40px;}
+	
+	> .dino-1{
+		position: absolute;
+		width: 180px;
+		height: 60px;
+		border: $outline;
+		bottom: 50px;
+		left: 60px;
+		> .body{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100px;
+			height: 40px;
+			border-radius: 50%;
+			background: linear-gradient(to bottom, black, black 50%, white 50%);
+			&:before{
+				position: absolute;
+				content: '';
+				background-color: black;
+				$size: 30px;
+				width:$size/2;
+				height:$size;
+				border-radius:5em 0 0 5em;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%)
+					translate(-10px,-20px);
+			}
+			&:after{
+				z-index: 1;
+				position: absolute;
+				content: '';
+				width: 20px;
+				height: 20px;
+				border-radius: 0  5em;
+				background: linear-gradient(to top right, #5C3B13, #5C3B13 50%, #B3B5BA 50%);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) translate(-7px,18px);		
+			}
+		}
+		> .tail{
+			position: absolute;
+			width: 0;
+			height: 0;
+			background-color: transparent;
+			border-bottom: solid 9px transparent;
+			border-top: solid 9px transparent;
+			border-left: solid 50px black;
+			border-right: solid 0px transparent;
+			border-radius: 50%;
+			right: 0;
+			top: 50%;
+			transform: translatey(-50%);
+			&:before{
+				position: absolute;
+				content: '';
+				width: 15px;
+				height: 30px;
+				border-radius: 5em 0 0 5em;
+				background-color: black;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) translatex(-5px);
+			}
+			&:after{
+				z-index: 1;
+				position: absolute;
+				content: '';
+				width: 20px;
+				height: 20px;
+				border-radius: 0  5em;
+				background: linear-gradient(to top right, #5C3B13, #5C3B13 50%, #B3B5BA 50%);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) translate(-67px,18px);		
+			}
+		}
+		> .fins{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			&:before{
+				position: absolute;
+				content: '';
+				width: 20px;
+				height: 20px;
+				border-radius: 0  5em;
+				background: #B3B5BA;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) translate(-10px,20px);		
+				box-shadow: 30px 0 0 #B3B5BA;
+			}
+			
+		}
+		> .beak{
+			position: absolute;
+			
+		}
+	}
+	> .dino-2{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 400px;
+		height: 130px;
+		border: $outline;
+		> .head{
+			position: absolute;
+			top: 50%;
+			transform: translatey(-50%);
+			width: 100px;
+			height: 50px;
+			border-radius: 1em 0 0.5em 0.5em;
+			background: linear-gradient(to bottom,#134C99,#134C99 60%,#FFC123 60%);
+			&:before{
+				position: absolute;
+				content: '';
+				top: 50%;
+				transform: translate(-0%, -50%) translatey(5px);
+				width: 80px;
+				height: 20px;
+				background: linear-gradient(to bottom, black,black 5%,#206CC0 5%, #206CC0 75%,#EA9400 75%);
+			}
+			&:after{
+				position: absolute;
+				content: '';
+				$size: 10px;
+				width:$size;
+				height:$size;
+				border-radius:50%;
+				background: radial-gradient(white,white 30%, red 30%);
+				border: solid 2px black;
+				left: 60px;
+			}
+			> .teeth{
+				position: absolute;
+				color: lightgray;
+				background-color: currentcolor;
+				width: 5px;
+				height: 5px;
+				border-radius: 0 0 0 5em;
+				transform: translatey(21px) translatex(5px);
+				box-shadow:
+					9px*1 0 0 currentcolor,
+					9px*2 0 0 currentcolor,
+					9px*3 0 0 currentcolor,
+					9px*4 0 0 currentcolor,
+					9px*5 0 0 currentcolor,
+					9px*6 0 0 currentcolor,
+					9px*7 0 0 currentcolor;
+				&:before{
+					content: '';
+					position: absolute;
+				color: lightgray;
+				background-color: currentcolor;
+				width: 5px;
+				height: 5px;
+				border-radius: 5em 0 0 0;
+				transform: translatey(10px) translatex(-5px);
+				box-shadow:
+					9px*1 0 0 currentcolor,
+					9px*2 0 0 currentcolor,
+					9px*3 0 0 currentcolor,
+					9px*4 0 0 currentcolor,
+					9px*5 0 0 currentcolor,
+					9px*6 0 0 currentcolor,
+					9px*7 0 0 currentcolor,
+					9px*8 0 0 currentcolor;
+				}
+			}
+		}
+		> .tail {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translatey(-50%);
+			width: 90px;
+			height: 40px;
+			border-radius: 0 0 5em 0;
+			background: linear-gradient(to bottom,#114D96,#114D96 50%,#FFC023 50%);
+		}
+		> .body{
+			position: absolute;
+			width: 220px;
+			height: 70px;
+			background: linear-gradient(to bottom,#0B3B7A,#0B3B7A 60%, #EE7001 60%);
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) translatex(10px);
+			border-radius: 0.5em;
+			&:before{
+				content: '';
+				position: absolute;
+				background-color: #0B3B7A;
+				width: 30px;
+				height: 20px;
+				border-radius: 0.5em 0 0 0;
+				left: -18px;
+				top: 22px;
+			}
+			&:after{
+				position: absolute;
+				content: '';
+				$size: 10px;
+				width:$size;
+				height:$size;
+				border-radius:50%;
+				color: #104B9A;
+				background-color: currentcolor;
+				top: 26px;
+				left: -13px;
+				box-shadow:
+					20px -18px 0 currentcolor,
+					20px+15px*1 -18px 0 currentcolor,
+					20px+15px*2 -18px 0 currentcolor,
+					20px+15px*3 -18px 0 currentcolor,
+					20px+15px*4 -18px 0 currentcolor,
+					20px+15px*5 -18px 0 currentcolor,
+					20px+15px*6 -18px 0 currentcolor,
+					20px+15px*7 -18px 0 currentcolor,
+					20px+15px*8 -18px 0 currentcolor,
+					20px+15px*9 -18px 0 currentcolor,
+					20px+15px*10 -18px 0 currentcolor,
+					20px+15px*11 -18px 0 currentcolor,
+					20px+15px*12 -18px 0 currentcolor,
+					20px+15px*13 -18px 0 currentcolor,
+					27px+15px*0 -5px 0 currentcolor,
+					27px+15px*1 -5px 0 currentcolor,
+					27px+15px*2 -5px 0 currentcolor,
+					27px+15px*3 -5px 0 currentcolor,
+					27px+15px*4 -5px 0 currentcolor,
+					27px+15px*5 -5px 0 currentcolor,
+					27px+15px*6 -5px 0 currentcolor,
+					27px+15px*7 -5px 0 currentcolor,
+					27px+15px*8 -5px 0 currentcolor,
+					27px+15px*9 -5px 0 currentcolor,
+					27px+15px*10 -5px 0 currentcolor,
+					27px+15px*11 -5px 0 currentcolor,
+					27px+15px*12 -5px 0 currentcolor;
+			}
+		}
+		> .fin-back{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			$size: 80px;
+			$diff: 10px;
+			&:after,&:before{
+				content: '';
+				position: absolute;
+				background-color: #081D39;
+				box-shadow: 60px 70px 0 #081D39;
+			}
+			&:after{
+				width:$size/2.5;
+				height:$size;
+				border-radius:0 5em 5em 0;
+				transform: translatex(-40px) rotate(-50deg);
+			}
+			&:before{
+				width: $diff;
+				height: $size + $diff;
+				border-radius: 5em;
+				transform: translate(-40px,10px) rotate(-50deg);
+			}
+		}
+		> .fin-frontL{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%)
+				translate(-50px,10px);
+			$size: 10px;
+			width:$size;
+			height:$size;
+			border-radius:50%;
+			border: solid 10px #081D39;
+			$size: 80px;
+			$diff: 10px;
+			&:after,&:before{
+				content: '';
+				position: absolute;
+			}
+			&:before{
+				background-image: repeating-linear-gradient(#0A1F3C, #0A1F3C 10%, #0C3972 10%,#0C3972 20%);
+				width:$size/2.5;
+				height:$size;
+				border-radius:0 5em 5em 0;
+				transform: translate(28px,-20px) rotate(-50deg);
+			}
+			&:after{
+				background-color: #154B9F;
+				width: $diff;
+				height: $size + $diff;
+				border-radius: 5em;
+				transform: translate(28px,-15px) rotate(-50deg);
+			}
+		}
+		> .fin-frontR{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%)
+				translate(40px,10px);
+			$size: 10px;
+			width:$size;
+			height:$size;
+			border-radius:50%;
+			border: solid 10px #081D39;
+			$size: 80px;
+			$diff: 10px;
+			&:after,&:before{
+				content: '';
+				position: absolute;
+			}
+			&:before{
+				background-image: repeating-linear-gradient(#0A1F3C, #0A1F3C 10%, #0C3972 10%,#0C3972 20%);
+				width:$size/2.5;
+				height:$size;
+				border-radius:0 5em 5em 0;
+				transform: translate(28px,-20px) rotate(-50deg);
+			}
+			&:after{
+				background-color: #154B9F;
+				width: $diff;
+				height: $size + $diff;
+				border-radius: 5em;
+				transform: translate(28px,-15px) rotate(-50deg);
+			}
+		}
+	}
+	> .dino-3{
+		position: absolute;
+		right: 40px;
+		top: 10px;
+		width: 200px;
+		height: 200px;
+		border: $outline;
+		$skinL: #1BB1D6;
+		$skinD: #0F667A;
+		$skinM: #1586A4;
+		> .neck{
+			position: absolute;
+			width: 30px;
+			height: 100px;
+			color: $skinL;
+			border-radius: 5em 0 0 5em;
+			border-bottom: solid 20px $skinL; 
+			border-left: solid 20px $skinL; 
+			border-right: solid 0px transparent; 
+			border-top: solid 10px $skinL; 
+			&:before{
+				position: absolute;
+				content: '';
+				top: -10px;
+				left: 20px;
+				width: 25px;
+				height: 15px;
+				border-radius: 0.5em 5em 5em 0.5em;
+				border-left: solid 4px $skinM;
+				background: linear-gradient(to bottom,$skinL 0, 50%,$skinM 50%);
+			}
+			&:after{
+				position: absolute;
+				content: '';
+				top: -5px;
+				left: 28px;
+				$size: 6px;
+				width:$size;
+				height:$size;
+				border-radius:50%;
+				background: radial-gradient(white 0,white 20%, black 20%);
+			}
+		}
+		> .body{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) translate(15px,15px);
+			width: 160px;
+			height: 100px;
+			border-radius: 5em;
+			background: linear-gradient(to bottom, $skinL 0,60%,#ADC5CF 60%);
+			$size: 25px;
+			&:after{
+				position: absolute;
+				content: '';
+				width: $size;
+				height: 7px;
+				color: $skinM;
+				background-color: currentcolor;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) translate(-45px,-10px);
+				border-radius: 5em;
+				box-shadow:
+					$size*1+5px*1 0 0 currentcolor,
+					$size*2+5px*2 0 0 currentcolor,
+					$size*3+5px*3 0 0 currentcolor,
+					$size*1+5px*1 -15px 0 currentcolor,
+					$size*2+5px*2 -15px 0 currentcolor;
+			}
+			&:before{
+				position: absolute;
+				content: '';
+				width: $size/2;
+				height: 7px;
+				color: $skinM;
+				background-color: currentcolor;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) translate(-45px,-10px);
+				border-radius: 5em;
+				box-shadow:
+					$size*0+5px*1 -15px 0 currentcolor,
+					$size*3+5px*2 -15px 0 currentcolor;
+			}
+		}
+		> .fin-back{
+			position: absolute;
+			width:40px;
+			height: 20px;
+			background-color: $skinL;
+			border-radius: 0 0 5em 0;
+			right: -20px;
+			top: 50%;
+			transform: translatey(-50%) translatey(12px);
+			&:after,&:before{
+				position: absolute;
+				content: '';
+				background-color: currentcolor;
+			}
+			&:after{
+				width: 8px;
+				height: 100px;
+				border-radius: 5em;
+				color: $skinM;
+				transform: translate(-150px,-00px) rotate(50deg);
+				box-shadow: 70px -70px 0 currentcolor;
+			}
+			&:before{
+				width: 30px;
+				height: 90px;
+				border-radius: 0 5em 5em 0;
+				color: $skinD;
+				transform: translate(-150px,20px) rotate(50deg);
+				box-shadow: 70px -72px 0 currentcolor;
+			}
+		}
+		> .fin-frontL,
+		> .fin-frontR {
+			position: absolute;
+			$size: 30px;
+			width:$size;
+			height:$size;
+			background-color: $skinM;
+			border-radius: 50%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) translate(-35px,30px);
+			&:after{
+				position: absolute;
+				content: '';
+				width: 8px;
+				height: 100px;
+				border-radius: 5em;
+				background-color: $skinL;
+				transform-origin: top center;
+				transform: translate(5px,10px) rotate(-45deg);
+			}
+			&:before{
+				position: absolute;
+				content: '';
+				width: 30px;
+				height: 90px;
+				border-radius: 0 5em 5em 0;
+				background: repeating-linear-gradient($skinM 0,$skinM 10px,$skinD 10px,$skinD 20px);
+				transform-origin: top center;
+				transform: translate(10px,0px) rotate(-45deg);
+			}
+		}
+		> .fin-frontR{
+			transform: translate(-50%, -50%) translate(55px,30px);
+		}
+	}
+	> .dino-4{
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		border: $outline;
+		width: 300px;
+		height: 80px;
+		$skinG: #699800;
+		$skinDG: #507105;
+		$skinLG: #8AC802;
+		$skinLO: #EC7000;
+		$skinDO: #D24B00;
+		> .head{
+			z-index: -2;
+			position: absolute;
+			width: 80px;
+			height: 30px;
+			border-radius: 1em 0 0 0.5em;
+			background: 
+				linear-gradient(to bottom,
+					$skinG,$skinG 70%,$skinLO 70%);
+			top: 20px;
+			&:after{
+				position: absolute;
+				content: '';
+				$size: 10px;
+				width:$size;
+				height:$size;
+				border-radius:50%;
+				background: radial-gradient(white,white 20%,black 20%);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) translatey(-3px);
+			}
+			> .teeth{
+				position: absolute;
+				left: 0;
+				top: 70%;
+				height: 1px;
+				background-color: $skinLG;
+				width: 50px;
+				&:after{
+					position: absolute;
+					content: '';
+					width: 5px;
+					height: 5px;
+					border-radius: 5em 0 0 0;
+					color: white;
+					background-color: currentcolor;
+					top: -5px;
+					left: 5px;
+					box-shadow:
+						10px*1 0 0 currentcolor,
+						10px*2 0 0 currentcolor,
+				}
+				&:before{
+					position: absolute;
+					content: '';
+					width: 4px;
+					height: 4px;
+					border-radius: 0 0 0 5em ;
+					color: white;
+					background-color: currentcolor;
+					top: 0px;
+					left: 0px;
+					box-shadow:
+						10px*1 0 0 currentcolor,
+						10px*2 0 0 currentcolor,
+						10px*3 0 0 currentcolor,
+				}
+			}
+		}
+		> .body{
+			position: absolute;
+			width: 150px;
+			height: 50px;
+			border-radius: 50% 50% 0.5em 0.5em;
+			background: 
+				linear-gradient(to bottom,
+					$skinG,$skinG 80%,$skinLO 80%);
+			top: 3px;
+			left: 65px;
+			border: solid 5px transparent;
+			border-top: solid 6px $skinLG;
+			border-bottom: solid 0px $skinLG;
+			overflow: hidden;
+			&:after{
+				content: '';
+				position: absolute;
+				$size: 10px;
+				width: $size;
+				height: 22px;
+				border-radius: 5em;
+				background-color: $skinDG;
+				top: -4px;
+				left: 10px;
+				box-shadow:
+					$size*1+5px*1 0 0 $skinDG,
+					$size*2+5px*2 0 0 $skinDG,
+					$size*3+5px*3 0 0 $skinDG,
+					$size*4+5px*4 0 0 $skinDG,
+					$size*5+5px*5 0 0 $skinDG,
+					$size*6+5px*6 0 0 $skinDG,
+					$size*7+5px*7 0 0 $skinDG,
+					$size*8+5px*8 0 0 $skinDG,
+			}
+		}
+		> .tail{
+			z-index: -1;
+			position: absolute;
+			width: 254px;
+			height: 30px;
+			border-radius: 1em 0.5em 5em 0;
+			border-top: solid 6px $skinLG;
+			background: 
+				linear-gradient(to bottom,
+					$skinG,$skinG 70%,$skinLO 70%);
+			top: 14px;
+			right: 0;
+			&:before{
+				position: absolute;
+				content: '';
+				width: 10px;
+				height: 8px;
+				border-radius: 0 0 5em 5em;
+				color: $skinDG;
+				background-color: currentcolor;
+				right: 5px;
+				top: 0px;
+				box-shadow:
+					-15px*1 0 0 currentcolor,
+					-15px*2 0 0 currentcolor,
+					-15px*3 0 0 currentcolor,
+					-15px*4 0 0 currentcolor;
+			}
+		}
+		> .fins-back{
+			position: absolute;
+			color: $skinDO;
+			width: 40px;
+			height: 40px;
+			background-color: currentcolor;
+			border-radius: 0 5em;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%)
+				translate(-50px, 30px);
+			box-shadow: 70px 0 0 currentcolor;
+		}
+		> .fins-front{
+			position: absolute;
+			$size: 15px;
+			width:$size;
+			height:$size;
+			border-radius:50%;
+			color: $skinDG;
+			background-color: currentcolor;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%)
+				translate(-50px, 10px);
+			box-shadow: 70px 0 0 currentcolor;
+			&:after,&:before{
+				position: absolute;
+				content: '';
+				$size: 40px;
+				width:$size;
+				height:$size;
+				border-radius: 0 5em;
+				background: linear-gradient(45deg,$skinG, $skinG 50%, $skinLO 50%);
+				top: 7px;
+				left: 7px;
+			}
+			&:after{
+				top: 7px;
+				left: 77px;
+			}
+		}
+		
+	}
+}
