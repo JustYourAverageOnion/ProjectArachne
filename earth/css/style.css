@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #68985a;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.toph {
+  position: relative;
+  margin: 2em auto;
+  width: 500px;
+  height: 500px;
+  background-color: #68985a;
+}
+.toph > .hair {
+  position: absolute;
+  background-color: #414042;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: solid 10px black;
+}
+.toph > .hair > .band {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  bottom: 15px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid 10px black;
+  background: repeating-radial-gradient(#dcc768 0px, #dcc768 9px, #68985a 9px, #68985a 18px);
+}
+.toph > .hair > .band:after, .toph > .hair > .band:before {
+  position: absolute;
+  content: "";
+  background-color: white;
+  border: solid 10px black;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 50%;
+}
+.toph > .hair > .band:after {
+  transform: translate(-50%, -50%) translatey(20px);
+}
+.toph > .hair > .band:before {
+  right: 0;
+  transform: translate(50%, -50%) translatey(20px);
+}
+.toph > .hair > .face {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translatex(-50%);
+  border: solid 10px black;
+  bottom: -10px;
+  background: linear-gradient(#414042 0px, #414042 120px, black 120px, black 130px, #a89787 130px, #a89787 140px, #ffe5cb 140px);
+}
+.toph > .hair > .face > .eyes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 60px 0 0 #e3e4e5, -60px 0 0 #e3e4e5;
+}
+.toph > .hair > .face > .eyes:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 60px -5px 0 white, -60px -5px 0 white;
+}
+.toph > .hair > .face > .mouth {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: 20px;
+  width: 120px;
+  height: 60px;
+  border-radius: 0 0 5em 5em;
+  background-color: #d8b4ae;
+  border-top: solid 10px #c6a49f;
+  overflow: hidden;
+}
+.toph > .hair > .face > .mouth:after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #c62f41;
+  left: 50%;
+  transform: translate(-50%, 25%);
+  bottom: 0;
+}
+.toph > .body {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  border: solid 10px black;
+  width: 120px;
+  height: 200px;
+  background: linear-gradient(to right, #68985A 0%, #68985A 20%, #DCC768 20%, #DCC768 80%, #68985A 80%);
+}
+.toph > .shadow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 220px;
+  height: 30px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  bottom: 0;
+}

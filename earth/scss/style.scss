@@ -1,0 +1,162 @@
+$green: #68985a;
+* {
+	margin: 0;
+	padding: 0;
+	background-color: $green;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+.toph {
+	position: relative;
+	margin: 2em auto;
+	width: 500px;
+	height: 500px;
+	// border: solid black 1px;
+	background-color: $green;
+	$hair: #414042;
+	> .hair {
+		position: absolute;
+		background-color: $hair;
+		left: 50%;
+		transform: translatex(-50%);
+		$size: 350px;
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+		border: solid 10px black;
+		$diff: 50px;
+		> .band {
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, -0%);
+			bottom: 15px;
+			width: -$diff+$size;
+			height: -$diff+$size;
+			border-radius: 50%;
+			border: solid 10px black;
+			$width: 9px;
+			background: repeating-radial-gradient(
+				#dcc768 $width*0,
+				#dcc768 $width*1,
+				#68985a $width*1,
+				#68985a $width*2
+			);
+			&:after,
+			&:before {
+				position: absolute;
+				content: "";
+				$sizeN: 80px;
+				background-color: white;
+				border: solid 10px black;
+				width: $sizeN;
+				height: $sizeN;
+				border-radius: 50%;
+				top: 50%;
+			}
+			&:after {
+				transform: translate(-50%, -50%) translatey(20px);
+			}
+			&:before {
+				right: 0;
+				transform: translate(50%, -50%) translatey(20px);
+			}
+		}
+		> .face {
+			position: absolute;
+			width: -$diff+$size;
+			height: -$diff+$size;
+			border-radius: 50%;
+			left: 50%;
+			transform: translatex(-50%);
+			border: solid 10px black;
+			bottom: -10px;
+			background: linear-gradient(
+				$hair 0px,
+				$hair (-$diff+$size)*0.4,
+				black (-$diff+$size)*0.4,
+				black (-$diff+$size)*0.4+10px,
+				#a89787 (-$diff+$size)*0.4+10px,
+				#a89787 (-$diff+$size)*0.4+20px,
+				#ffe5cb (-$diff+$size)*0.4+20px
+			);
+			> .eyes {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-color: transparent;
+				$sizeE: 35px;
+				width: $sizeE;
+				height: $sizeE;
+				border-radius: 50%;
+				box-shadow: 60px 0 0 #e3e4e5, -60px 0 0 #e3e4e5;
+				&:before {
+					content: "";
+					position: absolute;
+					$diff: 20px;
+					width: -$diff+$sizeE;
+					height: -$diff+$sizeE;
+					border-radius: 50%;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					box-shadow: 60px -5px 0 white, -60px -5px 0 white;
+				}
+			}
+			> .mouth {
+				position: absolute;
+				left: 50%;
+				transform: translatex(-50%);
+				bottom: 20px;
+				$sizeM: 120px;
+				width: $sizeM;
+				height: $sizeM/2;
+				border-radius: 0 0 5em 5em;
+				background-color: #d8b4ae;
+				border-top: solid 10px #c6a49f;
+				overflow: hidden;
+				&:after {
+					position: absolute;
+					content: "";
+					$sizeT: 100px;
+					width: $sizeT;
+					height: $sizeT/2;
+					border-radius: 50%;
+					background-color: #c62f41;
+					left: 50%;
+					transform: translate(-50%, 25%);
+					bottom: 0;
+				}
+			}
+		}
+	}
+	> .body {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translatex(-50%);
+		border: solid 10px black;
+		width: 120px;
+		height: 200px;
+		background: 
+			linear-gradient(
+				to right,
+				#68985A 0%, 
+				#68985A 20%,
+				#DCC768 20%,
+				#DCC768 80%,
+				#68985A 80%,
+			)
+	}
+> .shadow{
+	position: absolute;
+	background-color: rgba(0,0,0,0.3);
+	width: 220px;
+	height: 30px;
+	border-radius: 50%;
+	left: 50%;
+	transform: translate(-50%,50%);
+	bottom: 0;
+}
+}
