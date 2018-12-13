@@ -1,0 +1,1211 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  min-height: 90vh;
+  padding: 2em;
+  background: white;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  text-align: center;
+}
+.wrapper h1 {
+  font-size: 2.125em;
+}
+.wrapper p {
+  font-size: 1em;
+  margin-bottom: 1rem;
+}
+
+.line {
+  position: relative;
+  height: 90px;
+  width: 100vw;
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+.line > div {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  background-color: #edeadb;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  top: 0;
+  left: 50%;
+}
+.line > div:nth-child(even) {
+  transform: translate(-120%, -50%);
+}
+.line > div:nth-child(odd) {
+  transform: translate(0, -50%);
+}
+.line > div:before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  background-color: transparent;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  top: 50%;
+  left: 50%;
+  box-shadow: -15px 10px 0 rgba(0, 0, 0, 0.05);
+  transform: translate(-50%, -50%) translate(15px, -10px);
+}
+.line > div > span {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(120px) rotate(90deg);
+  font-size: 1.2em;
+}
+
+.ears {
+  position: absolute;
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -150%) translate(50px, -20px);
+  box-shadow: -300px 0 0 black, 150px 0 0 black, -150px 0 0 black;
+}
+
+.panda-1 > .face,
+.panda-2 > .face,
+.panda-3 > .face,
+.panda-4 > .face,
+.panda-5 > .face,
+.panda-6 > .face,
+.panda-7 > .face,
+.panda-8 > .face,
+.panda-9 > .face,
+.panda-10 > .face,
+.panda-11 > .face,
+.panda-12 > .face {
+  position: absolute;
+  width: 150px;
+  height: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.panda-1 > .face > .eyes,
+.panda-2 > .face > .eyes,
+.panda-3 > .face > .eyes,
+.panda-4 > .face > .eyes,
+.panda-5 > .face > .eyes,
+.panda-6 > .face > .eyes,
+.panda-7 > .face > .eyes,
+.panda-8 > .face > .eyes,
+.panda-9 > .face > .eyes,
+.panda-10 > .face > .eyes,
+.panda-11 > .face > .eyes,
+.panda-12 > .face > .eyes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.panda-1 > .face > .eyes:after,
+.panda-2 > .face > .eyes:after,
+.panda-3 > .face > .eyes:after,
+.panda-4 > .face > .eyes:after,
+.panda-5 > .face > .eyes:after,
+.panda-6 > .face > .eyes:after,
+.panda-7 > .face > .eyes:after,
+.panda-8 > .face > .eyes:after,
+.panda-9 > .face > .eyes:after,
+.panda-10 > .face > .eyes:after,
+.panda-11 > .face > .eyes:after,
+.panda-12 > .face > .eyes:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 65px;
+  width: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%) translate(-40px, -10px) rotate(50deg);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+.panda-1 > .face > .eyes:before,
+.panda-2 > .face > .eyes:before,
+.panda-3 > .face > .eyes:before,
+.panda-4 > .face > .eyes:before,
+.panda-5 > .face > .eyes:before,
+.panda-6 > .face > .eyes:before,
+.panda-7 > .face > .eyes:before,
+.panda-8 > .face > .eyes:before,
+.panda-9 > .face > .eyes:before,
+.panda-10 > .face > .eyes:before,
+.panda-11 > .face > .eyes:before,
+.panda-12 > .face > .eyes:before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 65px;
+  width: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%) translate(40px, -10px) rotate(-50deg);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+.panda-1 > .face > .nose,
+.panda-2 > .face > .nose,
+.panda-3 > .face > .nose,
+.panda-4 > .face > .nose,
+.panda-5 > .face > .nose,
+.panda-6 > .face > .nose,
+.panda-7 > .face > .nose,
+.panda-8 > .face > .nose,
+.panda-9 > .face > .nose,
+.panda-10 > .face > .nose,
+.panda-11 > .face > .nose,
+.panda-12 > .face > .nose {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.panda-1 > .face > .nose:after,
+.panda-2 > .face > .nose:after,
+.panda-3 > .face > .nose:after,
+.panda-4 > .face > .nose:after,
+.panda-5 > .face > .nose:after,
+.panda-6 > .face > .nose:after,
+.panda-7 > .face > .nose:after,
+.panda-8 > .face > .nose:after,
+.panda-9 > .face > .nose:after,
+.panda-10 > .face > .nose:after,
+.panda-11 > .face > .nose:after,
+.panda-12 > .face > .nose:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 15px;
+  height: 18px;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translate(-50%, -50%) translate(-4px, 10px) rotate(45deg);
+  border-radius: 50%;
+}
+.panda-1 > .face > .nose:before,
+.panda-2 > .face > .nose:before,
+.panda-3 > .face > .nose:before,
+.panda-4 > .face > .nose:before,
+.panda-5 > .face > .nose:before,
+.panda-6 > .face > .nose:before,
+.panda-7 > .face > .nose:before,
+.panda-8 > .face > .nose:before,
+.panda-9 > .face > .nose:before,
+.panda-10 > .face > .nose:before,
+.panda-11 > .face > .nose:before,
+.panda-12 > .face > .nose:before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 15px;
+  height: 18px;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translate(-50%, -50%) translate(4px, 10px) rotate(-45deg);
+  border-radius: 50%;
+}
+.panda-1 > .face > .spots,
+.panda-2 > .face > .spots,
+.panda-3 > .face > .spots,
+.panda-4 > .face > .spots,
+.panda-5 > .face > .spots,
+.panda-6 > .face > .spots,
+.panda-7 > .face > .spots,
+.panda-8 > .face > .spots,
+.panda-9 > .face > .spots,
+.panda-10 > .face > .spots,
+.panda-11 > .face > .spots,
+.panda-12 > .face > .spots {
+  position: absolute;
+  color: white;
+  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(-20px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.panda-1 > .face > .spots:after,
+.panda-2 > .face > .spots:after,
+.panda-3 > .face > .spots:after,
+.panda-4 > .face > .spots:after,
+.panda-5 > .face > .spots:after,
+.panda-6 > .face > .spots:after,
+.panda-7 > .face > .spots:after,
+.panda-8 > .face > .spots:after,
+.panda-9 > .face > .spots:after,
+.panda-10 > .face > .spots:after,
+.panda-11 > .face > .spots:after,
+.panda-12 > .face > .spots:after {
+  content: "";
+  position: absolute;
+  color: white;
+  background-color: white;
+  left: 25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.panda-1 > .face > .spots:before,
+.panda-2 > .face > .spots:before,
+.panda-3 > .face > .spots:before,
+.panda-4 > .face > .spots:before,
+.panda-5 > .face > .spots:before,
+.panda-6 > .face > .spots:before,
+.panda-7 > .face > .spots:before,
+.panda-8 > .face > .spots:before,
+.panda-9 > .face > .spots:before,
+.panda-10 > .face > .spots:before,
+.panda-11 > .face > .spots:before,
+.panda-12 > .face > .spots:before {
+  content: "";
+  position: absolute;
+  color: white;
+  background-color: white;
+  left: -35px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.panda-1 > .face > .curves,
+.panda-2 > .face > .curves,
+.panda-3 > .face > .curves,
+.panda-4 > .face > .curves,
+.panda-5 > .face > .curves,
+.panda-6 > .face > .curves,
+.panda-7 > .face > .curves,
+.panda-8 > .face > .curves,
+.panda-9 > .face > .curves,
+.panda-10 > .face > .curves,
+.panda-11 > .face > .curves,
+.panda-12 > .face > .curves {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.panda-1 > .face > .curves:after,
+.panda-2 > .face > .curves:after,
+.panda-3 > .face > .curves:after,
+.panda-4 > .face > .curves:after,
+.panda-5 > .face > .curves:after,
+.panda-6 > .face > .curves:after,
+.panda-7 > .face > .curves:after,
+.panda-8 > .face > .curves:after,
+.panda-9 > .face > .curves:after,
+.panda-10 > .face > .curves:after,
+.panda-11 > .face > .curves:after,
+.panda-12 > .face > .curves:after {
+  content: "";
+  position: absolute;
+  color: #edeadb;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: tranparent;
+  border-radius: 50%;
+  box-shadow: -45px 0 0 black, 45px 0 0 black;
+}
+.panda-1 > .face > .curves:before,
+.panda-2 > .face > .curves:before,
+.panda-3 > .face > .curves:before,
+.panda-4 > .face > .curves:before,
+.panda-5 > .face > .curves:before,
+.panda-6 > .face > .curves:before,
+.panda-7 > .face > .curves:before,
+.panda-8 > .face > .curves:before,
+.panda-9 > .face > .curves:before,
+.panda-10 > .face > .curves:before,
+.panda-11 > .face > .curves:before,
+.panda-12 > .face > .curves:before {
+  content: "";
+  position: absolute;
+  color: #edeadb;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(-5px);
+  background-color: tranparent;
+  border-radius: 50%;
+  box-shadow: -45px 0 0 white, 45px 0 0 white;
+}
+.panda-1 > .face > .curvesD,
+.panda-2 > .face > .curvesD,
+.panda-3 > .face > .curvesD,
+.panda-4 > .face > .curvesD,
+.panda-5 > .face > .curvesD,
+.panda-6 > .face > .curvesD,
+.panda-7 > .face > .curvesD,
+.panda-8 > .face > .curvesD,
+.panda-9 > .face > .curvesD,
+.panda-10 > .face > .curvesD,
+.panda-11 > .face > .curvesD,
+.panda-12 > .face > .curvesD {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(-20px);
+}
+.panda-1 > .face > .curvesD:after,
+.panda-2 > .face > .curvesD:after,
+.panda-3 > .face > .curvesD:after,
+.panda-4 > .face > .curvesD:after,
+.panda-5 > .face > .curvesD:after,
+.panda-6 > .face > .curvesD:after,
+.panda-7 > .face > .curvesD:after,
+.panda-8 > .face > .curvesD:after,
+.panda-9 > .face > .curvesD:after,
+.panda-10 > .face > .curvesD:after,
+.panda-11 > .face > .curvesD:after,
+.panda-12 > .face > .curvesD:after {
+  content: "";
+  position: absolute;
+  color: #edeadb;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: tranparent;
+  border-radius: 50%;
+  box-shadow: -45px 0 0 black, 45px 0 0 black;
+}
+.panda-1 > .face > .curvesD:before,
+.panda-2 > .face > .curvesD:before,
+.panda-3 > .face > .curvesD:before,
+.panda-4 > .face > .curvesD:before,
+.panda-5 > .face > .curvesD:before,
+.panda-6 > .face > .curvesD:before,
+.panda-7 > .face > .curvesD:before,
+.panda-8 > .face > .curvesD:before,
+.panda-9 > .face > .curvesD:before,
+.panda-10 > .face > .curvesD:before,
+.panda-11 > .face > .curvesD:before,
+.panda-12 > .face > .curvesD:before {
+  content: "";
+  position: absolute;
+  color: #edeadb;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(5px);
+  background-color: tranparent;
+  border-radius: 50%;
+  box-shadow: -45px 0 0 white, 45px 0 0 white;
+}
+.panda-1 > .face > .wink,
+.panda-2 > .face > .wink,
+.panda-3 > .face > .wink,
+.panda-4 > .face > .wink,
+.panda-5 > .face > .wink,
+.panda-6 > .face > .wink,
+.panda-7 > .face > .wink,
+.panda-8 > .face > .wink,
+.panda-9 > .face > .wink,
+.panda-10 > .face > .wink,
+.panda-11 > .face > .wink,
+.panda-12 > .face > .wink {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.panda-1 > .face > .wink:after,
+.panda-2 > .face > .wink:after,
+.panda-3 > .face > .wink:after,
+.panda-4 > .face > .wink:after,
+.panda-5 > .face > .wink:after,
+.panda-6 > .face > .wink:after,
+.panda-7 > .face > .wink:after,
+.panda-8 > .face > .wink:after,
+.panda-9 > .face > .wink:after,
+.panda-10 > .face > .wink:after,
+.panda-11 > .face > .wink:after,
+.panda-12 > .face > .wink:after {
+  content: "";
+  position: absolute;
+  color: #edeadb;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: tranparent;
+  border-radius: 50%;
+  box-shadow: 35px -9px 0 black;
+}
+.panda-1 > .face > .wink:before,
+.panda-2 > .face > .wink:before,
+.panda-3 > .face > .wink:before,
+.panda-4 > .face > .wink:before,
+.panda-5 > .face > .wink:before,
+.panda-6 > .face > .wink:before,
+.panda-7 > .face > .wink:before,
+.panda-8 > .face > .wink:before,
+.panda-9 > .face > .wink:before,
+.panda-10 > .face > .wink:before,
+.panda-11 > .face > .wink:before,
+.panda-12 > .face > .wink:before {
+  content: "";
+  position: absolute;
+  color: #edeadb;
+  width: 17px;
+  height: 17px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(-5px);
+  background-color: tranparent;
+  border-radius: 50%;
+  box-shadow: -35px -10px 0 white, 35px -10px 0 white;
+}
+.panda-1 > .face > .cross,
+.panda-2 > .face > .cross,
+.panda-3 > .face > .cross,
+.panda-4 > .face > .cross,
+.panda-5 > .face > .cross,
+.panda-6 > .face > .cross,
+.panda-7 > .face > .cross,
+.panda-8 > .face > .cross,
+.panda-9 > .face > .cross,
+.panda-10 > .face > .cross,
+.panda-11 > .face > .cross,
+.panda-12 > .face > .cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(-10px);
+}
+.panda-1 > .face > .cross:after, .panda-1 > .face > .cross:before,
+.panda-2 > .face > .cross:after,
+.panda-2 > .face > .cross:before,
+.panda-3 > .face > .cross:after,
+.panda-3 > .face > .cross:before,
+.panda-4 > .face > .cross:after,
+.panda-4 > .face > .cross:before,
+.panda-5 > .face > .cross:after,
+.panda-5 > .face > .cross:before,
+.panda-6 > .face > .cross:after,
+.panda-6 > .face > .cross:before,
+.panda-7 > .face > .cross:after,
+.panda-7 > .face > .cross:before,
+.panda-8 > .face > .cross:after,
+.panda-8 > .face > .cross:before,
+.panda-9 > .face > .cross:after,
+.panda-9 > .face > .cross:before,
+.panda-10 > .face > .cross:after,
+.panda-10 > .face > .cross:before,
+.panda-11 > .face > .cross:after,
+.panda-11 > .face > .cross:before,
+.panda-12 > .face > .cross:after,
+.panda-12 > .face > .cross:before {
+  position: absolute;
+  content: '';
+  color: white;
+  background-color: currentcolor;
+  width: 7px;
+  height: 25px;
+  border-radius: 5em;
+  top: 50%;
+  left: 50%;
+}
+.panda-1 > .face > .cross:before,
+.panda-2 > .face > .cross:before,
+.panda-3 > .face > .cross:before,
+.panda-4 > .face > .cross:before,
+.panda-5 > .face > .cross:before,
+.panda-6 > .face > .cross:before,
+.panda-7 > .face > .cross:before,
+.panda-8 > .face > .cross:before,
+.panda-9 > .face > .cross:before,
+.panda-10 > .face > .cross:before,
+.panda-11 > .face > .cross:before,
+.panda-12 > .face > .cross:before {
+  transform: translate(-50%, -50%) translatex(-40px) rotate(45deg);
+  box-shadow: 55px -55px 0 currentcolor;
+}
+.panda-1 > .face > .cross:after,
+.panda-2 > .face > .cross:after,
+.panda-3 > .face > .cross:after,
+.panda-4 > .face > .cross:after,
+.panda-5 > .face > .cross:after,
+.panda-6 > .face > .cross:after,
+.panda-7 > .face > .cross:after,
+.panda-8 > .face > .cross:after,
+.panda-9 > .face > .cross:after,
+.panda-10 > .face > .cross:after,
+.panda-11 > .face > .cross:after,
+.panda-12 > .face > .cross:after {
+  transform: translate(-50%, -50%) translatex(-40px) rotate(-45deg);
+  box-shadow: 55px 55px 0 currentcolor;
+}
+.panda-1 > .face > .mouth,
+.panda-2 > .face > .mouth,
+.panda-3 > .face > .mouth,
+.panda-4 > .face > .mouth,
+.panda-5 > .face > .mouth,
+.panda-6 > .face > .mouth,
+.panda-7 > .face > .mouth,
+.panda-8 > .face > .mouth,
+.panda-9 > .face > .mouth,
+.panda-10 > .face > .mouth,
+.panda-11 > .face > .mouth,
+.panda-12 > .face > .mouth {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  border-radius: 2em 2em 10em 10em;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(50px);
+}
+.panda-1 > .face > .mouth:after,
+.panda-2 > .face > .mouth:after,
+.panda-3 > .face > .mouth:after,
+.panda-4 > .face > .mouth:after,
+.panda-5 > .face > .mouth:after,
+.panda-6 > .face > .mouth:after,
+.panda-7 > .face > .mouth:after,
+.panda-8 > .face > .mouth:after,
+.panda-9 > .face > .mouth:after,
+.panda-10 > .face > .mouth:after,
+.panda-11 > .face > .mouth:after,
+.panda-12 > .face > .mouth:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #edeadb;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.panda-1 > .face > .tongue,
+.panda-2 > .face > .tongue,
+.panda-3 > .face > .tongue,
+.panda-4 > .face > .tongue,
+.panda-5 > .face > .tongue,
+.panda-6 > .face > .tongue,
+.panda-7 > .face > .tongue,
+.panda-8 > .face > .tongue,
+.panda-9 > .face > .tongue,
+.panda-10 > .face > .tongue,
+.panda-11 > .face > .tongue,
+.panda-12 > .face > .tongue {
+  position: absolute;
+  background-color: #cb342d;
+  height: 30px;
+  width: 20px;
+  border-radius: 0 0 1em 1em;
+  transform-origin: top;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(-4px);
+}
+.panda-1 > .face > .blush,
+.panda-2 > .face > .blush,
+.panda-3 > .face > .blush,
+.panda-4 > .face > .blush,
+.panda-5 > .face > .blush,
+.panda-6 > .face > .blush,
+.panda-7 > .face > .blush,
+.panda-8 > .face > .blush,
+.panda-9 > .face > .blush,
+.panda-10 > .face > .blush,
+.panda-11 > .face > .blush,
+.panda-12 > .face > .blush {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #e4b9b2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 60px 30px 0 currentcolor, -60px 30px 0 currentcolor;
+}
+.panda-1 > .face > .tears,
+.panda-2 > .face > .tears,
+.panda-3 > .face > .tears,
+.panda-4 > .face > .tears,
+.panda-5 > .face > .tears,
+.panda-6 > .face > .tears,
+.panda-7 > .face > .tears,
+.panda-8 > .face > .tears,
+.panda-9 > .face > .tears,
+.panda-10 > .face > .tears,
+.panda-11 > .face > .tears,
+.panda-12 > .face > .tears {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.panda-1 > .face > .tears:before, .panda-1 > .face > .tears:after,
+.panda-2 > .face > .tears:before,
+.panda-2 > .face > .tears:after,
+.panda-3 > .face > .tears:before,
+.panda-3 > .face > .tears:after,
+.panda-4 > .face > .tears:before,
+.panda-4 > .face > .tears:after,
+.panda-5 > .face > .tears:before,
+.panda-5 > .face > .tears:after,
+.panda-6 > .face > .tears:before,
+.panda-6 > .face > .tears:after,
+.panda-7 > .face > .tears:before,
+.panda-7 > .face > .tears:after,
+.panda-8 > .face > .tears:before,
+.panda-8 > .face > .tears:after,
+.panda-9 > .face > .tears:before,
+.panda-9 > .face > .tears:after,
+.panda-10 > .face > .tears:before,
+.panda-10 > .face > .tears:after,
+.panda-11 > .face > .tears:before,
+.panda-11 > .face > .tears:after,
+.panda-12 > .face > .tears:before,
+.panda-12 > .face > .tears:after {
+  position: absolute;
+  content: '';
+  background: linear-gradient(to bottom, #62BEE9, #62BEE9 50%, transparent);
+  width: 20px;
+  height: 110px;
+  top: -12px;
+}
+.panda-1 > .face > .tears:after,
+.panda-2 > .face > .tears:after,
+.panda-3 > .face > .tears:after,
+.panda-4 > .face > .tears:after,
+.panda-5 > .face > .tears:after,
+.panda-6 > .face > .tears:after,
+.panda-7 > .face > .tears:after,
+.panda-8 > .face > .tears:after,
+.panda-9 > .face > .tears:after,
+.panda-10 > .face > .tears:after,
+.panda-11 > .face > .tears:after,
+.panda-12 > .face > .tears:after {
+  left: -55px;
+}
+.panda-1 > .face > .tears:before,
+.panda-2 > .face > .tears:before,
+.panda-3 > .face > .tears:before,
+.panda-4 > .face > .tears:before,
+.panda-5 > .face > .tears:before,
+.panda-6 > .face > .tears:before,
+.panda-7 > .face > .tears:before,
+.panda-8 > .face > .tears:before,
+.panda-9 > .face > .tears:before,
+.panda-10 > .face > .tears:before,
+.panda-11 > .face > .tears:before,
+.panda-12 > .face > .tears:before {
+  left: 35px;
+}
+.panda-1 > .face > .heartL,
+.panda-1 > .face > .heartR,
+.panda-2 > .face > .heartL,
+.panda-2 > .face > .heartR,
+.panda-3 > .face > .heartL,
+.panda-3 > .face > .heartR,
+.panda-4 > .face > .heartL,
+.panda-4 > .face > .heartR,
+.panda-5 > .face > .heartL,
+.panda-5 > .face > .heartR,
+.panda-6 > .face > .heartL,
+.panda-6 > .face > .heartR,
+.panda-7 > .face > .heartL,
+.panda-7 > .face > .heartR,
+.panda-8 > .face > .heartL,
+.panda-8 > .face > .heartR,
+.panda-9 > .face > .heartL,
+.panda-9 > .face > .heartR,
+.panda-10 > .face > .heartL,
+.panda-10 > .face > .heartR,
+.panda-11 > .face > .heartL,
+.panda-11 > .face > .heartR,
+.panda-12 > .face > .heartL,
+.panda-12 > .face > .heartR {
+  color: #CC3431;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.panda-1 > .face > .heartL:after, .panda-1 > .face > .heartL:before,
+.panda-1 > .face > .heartR:after,
+.panda-1 > .face > .heartR:before,
+.panda-2 > .face > .heartL:after,
+.panda-2 > .face > .heartL:before,
+.panda-2 > .face > .heartR:after,
+.panda-2 > .face > .heartR:before,
+.panda-3 > .face > .heartL:after,
+.panda-3 > .face > .heartL:before,
+.panda-3 > .face > .heartR:after,
+.panda-3 > .face > .heartR:before,
+.panda-4 > .face > .heartL:after,
+.panda-4 > .face > .heartL:before,
+.panda-4 > .face > .heartR:after,
+.panda-4 > .face > .heartR:before,
+.panda-5 > .face > .heartL:after,
+.panda-5 > .face > .heartL:before,
+.panda-5 > .face > .heartR:after,
+.panda-5 > .face > .heartR:before,
+.panda-6 > .face > .heartL:after,
+.panda-6 > .face > .heartL:before,
+.panda-6 > .face > .heartR:after,
+.panda-6 > .face > .heartR:before,
+.panda-7 > .face > .heartL:after,
+.panda-7 > .face > .heartL:before,
+.panda-7 > .face > .heartR:after,
+.panda-7 > .face > .heartR:before,
+.panda-8 > .face > .heartL:after,
+.panda-8 > .face > .heartL:before,
+.panda-8 > .face > .heartR:after,
+.panda-8 > .face > .heartR:before,
+.panda-9 > .face > .heartL:after,
+.panda-9 > .face > .heartL:before,
+.panda-9 > .face > .heartR:after,
+.panda-9 > .face > .heartR:before,
+.panda-10 > .face > .heartL:after,
+.panda-10 > .face > .heartL:before,
+.panda-10 > .face > .heartR:after,
+.panda-10 > .face > .heartR:before,
+.panda-11 > .face > .heartL:after,
+.panda-11 > .face > .heartL:before,
+.panda-11 > .face > .heartR:after,
+.panda-11 > .face > .heartR:before,
+.panda-12 > .face > .heartL:after,
+.panda-12 > .face > .heartL:before,
+.panda-12 > .face > .heartR:after,
+.panda-12 > .face > .heartR:before {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 50px;
+  background-color: #CC3431;
+  border-radius: 5em 5em 0 0;
+  top: 50%;
+  left: 50%;
+}
+.panda-1 > .face > .heartL:after,
+.panda-1 > .face > .heartR:after,
+.panda-2 > .face > .heartL:after,
+.panda-2 > .face > .heartR:after,
+.panda-3 > .face > .heartL:after,
+.panda-3 > .face > .heartR:after,
+.panda-4 > .face > .heartL:after,
+.panda-4 > .face > .heartR:after,
+.panda-5 > .face > .heartL:after,
+.panda-5 > .face > .heartR:after,
+.panda-6 > .face > .heartL:after,
+.panda-6 > .face > .heartR:after,
+.panda-7 > .face > .heartL:after,
+.panda-7 > .face > .heartR:after,
+.panda-8 > .face > .heartL:after,
+.panda-8 > .face > .heartR:after,
+.panda-9 > .face > .heartL:after,
+.panda-9 > .face > .heartR:after,
+.panda-10 > .face > .heartL:after,
+.panda-10 > .face > .heartR:after,
+.panda-11 > .face > .heartL:after,
+.panda-11 > .face > .heartR:after,
+.panda-12 > .face > .heartL:after,
+.panda-12 > .face > .heartR:after {
+  transform-origin: bottom right;
+  transform: translate(-50%, -50%) translate(6px, -20px) rotate(-45deg);
+}
+.panda-1 > .face > .heartL:before,
+.panda-1 > .face > .heartR:before,
+.panda-2 > .face > .heartL:before,
+.panda-2 > .face > .heartR:before,
+.panda-3 > .face > .heartL:before,
+.panda-3 > .face > .heartR:before,
+.panda-4 > .face > .heartL:before,
+.panda-4 > .face > .heartR:before,
+.panda-5 > .face > .heartL:before,
+.panda-5 > .face > .heartR:before,
+.panda-6 > .face > .heartL:before,
+.panda-6 > .face > .heartR:before,
+.panda-7 > .face > .heartL:before,
+.panda-7 > .face > .heartR:before,
+.panda-8 > .face > .heartL:before,
+.panda-8 > .face > .heartR:before,
+.panda-9 > .face > .heartL:before,
+.panda-9 > .face > .heartR:before,
+.panda-10 > .face > .heartL:before,
+.panda-10 > .face > .heartR:before,
+.panda-11 > .face > .heartL:before,
+.panda-11 > .face > .heartR:before,
+.panda-12 > .face > .heartL:before,
+.panda-12 > .face > .heartR:before {
+  transform-origin: bottom left;
+  transform: translate(-50%, -50%) translate(-6px, -20px) rotate(45deg);
+}
+.panda-1 > .face > .heartL,
+.panda-2 > .face > .heartL,
+.panda-3 > .face > .heartL,
+.panda-4 > .face > .heartL,
+.panda-5 > .face > .heartL,
+.panda-6 > .face > .heartL,
+.panda-7 > .face > .heartL,
+.panda-8 > .face > .heartL,
+.panda-9 > .face > .heartL,
+.panda-10 > .face > .heartL,
+.panda-11 > .face > .heartL,
+.panda-12 > .face > .heartL {
+  transform: translate(-50%, -50%) translate(-45px, -20px) rotate(-20deg);
+}
+.panda-1 > .face > .heartR,
+.panda-2 > .face > .heartR,
+.panda-3 > .face > .heartR,
+.panda-4 > .face > .heartR,
+.panda-5 > .face > .heartR,
+.panda-6 > .face > .heartR,
+.panda-7 > .face > .heartR,
+.panda-8 > .face > .heartR,
+.panda-9 > .face > .heartR,
+.panda-10 > .face > .heartR,
+.panda-11 > .face > .heartR,
+.panda-12 > .face > .heartR {
+  transform: translate(-50%, -50%) translate(45px, -20px) rotate(20deg);
+}
+.panda-1 > .face > .smile,
+.panda-2 > .face > .smile,
+.panda-3 > .face > .smile,
+.panda-4 > .face > .smile,
+.panda-5 > .face > .smile,
+.panda-6 > .face > .smile,
+.panda-7 > .face > .smile,
+.panda-8 > .face > .smile,
+.panda-9 > .face > .smile,
+.panda-10 > .face > .smile,
+.panda-11 > .face > .smile,
+.panda-12 > .face > .smile {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: 5px;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 100px;
+  height: 50px;
+  border: solid 8px transparent;
+  border-bottom-color: black;
+}
+.panda-1 > .face > .halo,
+.panda-2 > .face > .halo,
+.panda-3 > .face > .halo,
+.panda-4 > .face > .halo,
+.panda-5 > .face > .halo,
+.panda-6 > .face > .halo,
+.panda-7 > .face > .halo,
+.panda-8 > .face > .halo,
+.panda-9 > .face > .halo,
+.panda-10 > .face > .halo,
+.panda-11 > .face > .halo,
+.panda-12 > .face > .halo {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translatex(-50%);
+  background-color: transparent;
+  width: 150px;
+  height: 50px;
+  border: solid 7px #24AAC8;
+  border-radius: 50%;
+}
+
+.panda-3 > .face > .mouth {
+  position: absolute;
+  width: 50px;
+  height: 16.6666666667px;
+  border-radius: 2em 2em 10em 10em;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(50px);
+}
+.panda-3 > .face > .mouth:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: black;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.panda-3 > .face > .mouth:before {
+  content: '';
+  position: absolute;
+  color: #CB342D;
+  width: 20px;
+  height: 7px;
+  border-radius: 5em 5em 0 0;
+  background-color: currentcolor;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 2px);
+}
+
+.panda-4 > .face > .mouth {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(50px);
+  overflow: hidden;
+}
+.panda-4 > .face > .mouth:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 8px;
+  background-color: white;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.panda-4 > .face > .mouth:before {
+  content: '';
+  position: absolute;
+  color: #CB342D;
+  width: 20px;
+  height: 7px;
+  border-radius: 5em 5em 0 0;
+  background-color: currentcolor;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  bottom: 0;
+}
+
+.panda-5 > .face > .mouth {
+  position: absolute;
+  width: 70px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: solid 7px transparent;
+  border-top-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(55px);
+}
+.panda-5 > .face > .mouth:after {
+  background-color: transparent;
+}
+
+.panda-6 > .face > .mouth {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  border-radius: 10em 10em 2em 2em;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(50px);
+}
+.panda-6 > .face > .mouth:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #edeadb;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  bottom: -5px;
+}
+
+.panda-7 > .face > .mouth {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  border-radius: 10em 10em 2em 2em;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatey(50px);
+}
+.panda-7 > .face > .mouth:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #edeadb;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  bottom: -5px;
+}
+
+.panda-1:hover .face {
+  animation: bubble 2s infinite;
+}
+.panda-1:hover .face .spots:after,
+.panda-1:hover .face .spots:before {
+  animation: blink 2s infinite;
+}
+
+.panda-2:hover .face .spots:after,
+.panda-2:hover .face .spots:before {
+  animation: blink 2s infinite;
+}
+.panda-2:hover .face .tongue {
+  animation: strech 2s infinite;
+}
+
+.panda-3:hover .face {
+  animation: bubble 2s infinite;
+}
+
+.panda-4:hover .face {
+  animation: suprised 2s infinite;
+}
+.panda-4:hover .face > .mouth {
+  animation: widen 2s infinite;
+}
+
+.panda-5:hover .face {
+  animation: down 1s 1 forwards;
+}
+.panda-5:hover .face .spots:after,
+.panda-5:hover .face .spots:before {
+  animation: blink 2s infinite;
+}
+
+.panda-6:hover .face {
+  animation: wail 2s infinite;
+}
+.panda-6:hover .face > .mouth {
+  animation: big 2s infinite;
+}
+
+.panda-7:hover .face {
+  animation: wail 2s infinite;
+}
+
+.panda-8:hover .face > .heartL {
+  animation: beatL 2s infinite;
+}
+.panda-8:hover .face > .heartR {
+  animation: beatR 2s infinite;
+}
+
+.panda-10:hover .face .tongue {
+  animation: strech 2s infinite;
+}
+
+@keyframes beatL {
+  0%,50%,100% {
+    transform: translate(-50%, -50%) translate(-45px, -20px) rotate(-20deg) scale(1);
+  }
+  25%,75% {
+    transform: translate(-50%, -50%) translate(-45px, -20px) rotate(-20deg) scale(1.1);
+  }
+}
+@keyframes beatR {
+  0%,50%,100% {
+    transform: translate(-50%, -50%) translate(45px, -20px) rotate(20deg) scale(1);
+  }
+  25%,75% {
+    transform: translate(-50%, -50%) translate(45px, -20px) rotate(20deg) scale(1.1);
+  }
+}
+@keyframes strech {
+  0%,
+	100% {
+    transform: translate(-50%, -50%) translatey(-4px) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) translatey(-4px) scaley(1.2);
+  }
+}
+@keyframes down {
+  0% {
+    transform: translate(-50%, -50%) translatey(0px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translatey(8px);
+  }
+}
+@keyframes blink {
+  0%,
+	8%,
+	12%,
+	100% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0);
+  }
+}
+@keyframes bubble {
+  0%,
+	100% {
+    transform: translate(-50%, -50%) translatey(0px);
+  }
+  25%,
+	75% {
+    transform: translate(-50%, -50%) translatey(-5px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translatey(5px);
+  }
+}
+@keyframes suprised {
+  0%,
+	100% {
+    transform: translate(-50%, -50%) translatey(0px);
+  }
+  40%, 60% {
+    transform: translate(-50%, -50%) translatey(-5px);
+  }
+}
+@keyframes wail {
+  0%,60%,80%,100% {
+    transform: translate(-50%, -50%) translatey(0px);
+  }
+  50%,70%,90% {
+    transform: translate(-50%, -50%) translatey(-5px);
+  }
+}
+@keyframes widen {
+  0%,
+	100% {
+    transform: translate(-50%, -50%) translatey(50px) scale(1);
+  }
+  40%,60% {
+    transform: translate(-50%, -50%) translatey(50px) scale(1.2);
+  }
+}
+@keyframes big {
+  0%,100% {
+    transform: translate(-50%, -50%) translatey(50px) scale(1);
+  }
+  50%,60% {
+    transform: translate(-50%, -50%) translatey(50px) scale(1.2);
+  }
+}
